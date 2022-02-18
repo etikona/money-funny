@@ -8,7 +8,13 @@ function getInputValue(id){
    function totalExpensesAndBalance (){
        const income = getInputValue('income');
        const food = getInputValue('food-expense');
-       const rent = getInputValue('rent-expense');
+    //    const rent = getInputValue('rent-expense');
+       if( rent = getInputValue('rent-expense') ){
+         
+       }
+       else {
+           alert('Please give a number type data');
+       }
        const cloth =getInputValue('cloth-expense');
     //  Expenses  
        const totalExpenses = food + rent + cloth;
@@ -18,8 +24,8 @@ function getInputValue(id){
         //    balance
         const totalBalance = document.getElementById('total-balance');
       totalBalance.innerText = income - totalExpenses;
-       }}
-
+       }
+    }
        document.getElementById('calculate-btn').addEventListener('click', function(){
            totalExpensesAndBalance();
        })
